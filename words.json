@@ -238,6 +238,19 @@
 			"Ruly",
 			"Sufferable",
 			"Faluting"
+		],
+		"artisanal": [
+			"Craft",
+			"Bespoke",
+			"Artisanal",
+			"Purveyor",
+			"Hand Made",
+			"Gastro",
+			"Gourmet",
+			"Health",
+			"Premium",
+			"Painstakingly",
+			"Nestled"
 		]
 	}
 }
