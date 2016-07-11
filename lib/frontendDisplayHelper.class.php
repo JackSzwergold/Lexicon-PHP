@@ -74,13 +74,25 @@ class frontendDisplayHelper {
 	// Set the debug mode.
 	$this->DEBUG_MODE = $DEBUG_MODE;
 
+    //**************************************************************************************//
+    // Set the JSON directory.
+
     $json_dir = 'lib/';
 
+    //**************************************************************************************//
+    // Set the JSON filename.
+
     $json_filename = $json_dir . 'words.json';
+
+    //**************************************************************************************//
+    // Check if there is a JSON directory. If not? Exit.
 
     if (!is_file($json_filename)) {
       die('Sorry. The required JSON file could not be found.');
     }
+
+    //**************************************************************************************//
+    // Get the JSON file contents.
 
     $json_content = file_get_contents($json_filename);
 
