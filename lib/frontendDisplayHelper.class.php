@@ -123,7 +123,11 @@ class frontendDisplayHelper {
     $json_decoded = json_decode($json_content, TRUE);
 
     //**************************************************************************************//
-	// Array keys of the data.
+	// Get the array keys, shuffle them and select one random key.
+
+    $json_array_keys = array_keys($json_decoded['data']['attributes']);
+    shuffle($json_array_keys);
+    $json_array_key = $json_array_keys[0];
 
 	if (TRUE) {
 		echo '<pre>';
