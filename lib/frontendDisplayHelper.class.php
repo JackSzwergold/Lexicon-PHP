@@ -102,7 +102,7 @@ class frontendDisplayHelper {
     //**************************************************************************************//
     // Set the JSON filename.
 
-    $json_filename = $json_dir . 'words.json';
+    $json_filename = $json_dir . $this->VIEW_MODE . '.json';
 
     //**************************************************************************************//
     // Check if there is a JSON directory. If not? Exit.
