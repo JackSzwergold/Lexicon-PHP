@@ -51,7 +51,7 @@ $JSON_MODE = array_key_exists('json', $params);
 // Set the page base.
 
 $page_base = BASE_URL;
-$controller = 'small';
+$controller = 'words';
 if (array_key_exists('controller', $params) && !empty($params['controller']) && $params['controller'] != 'index') {
   $controller = $params['controller'];
   $page_base = BASE_URL . $params['controller'] . '/';
