@@ -35,7 +35,8 @@ $SITE_DESCRIPTION = 'A word and phrase API.';
 $SITE_URL = 'http://www.preworn.com/projects/words/';
 $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.';
 $SITE_ROBOTS = 'noindex, nofollow';
-$SITE_VIEWPORT = 'width=device-width, initial-scale=0.65, maximum-scale=2, minimum-scale=0.65, user-scalable=yes';
+// $SITE_VIEWPORT = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
+$SITE_VIEWPORT = 'width=device-width, initial-scale=1.0';
 
 // Favicon info.
 $FAVICONS = array();
@@ -68,16 +69,7 @@ $PAYMENT_INFO['paypal']['description'] = 'Support me with a PayPal donation.';
 // Set the page DIVs array.
 $PAGE_DIVS_ARRAY = array();
 $PAGE_DIVS_ARRAY[] = 'Wrapper';
-$PAGE_DIVS_ARRAY[] = 'Padding';
-$PAGE_DIVS_ARRAY[] = 'Content';
-$PAGE_DIVS_ARRAY[] = 'Padding';
-$PAGE_DIVS_ARRAY[] = 'Section';
-$PAGE_DIVS_ARRAY[] = 'Padding';
-$PAGE_DIVS_ARRAY[] = 'Middle';
 $PAGE_DIVS_ARRAY[] = 'Core';
-$PAGE_DIVS_ARRAY[] = 'Padding';
-$PAGE_DIVS_ARRAY[] = 'Grid';
-$PAGE_DIVS_ARRAY[] = 'Padding';
 
 // Set the JavaScript array.
 $JAVASCRIPTS_ITEMS = array();
