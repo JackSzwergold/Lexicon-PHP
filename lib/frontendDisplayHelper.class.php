@@ -136,9 +136,11 @@ class frontendDisplayHelper {
     shuffle($word_array);
     $word = $word_array[0];
 
+    //**************************************************************************************//
     // Set the body content.
     $this->html_content = $word;
 
+    //**************************************************************************************//
     // Process the JSON content.
     $this->json_content = json_encode($word);
 
