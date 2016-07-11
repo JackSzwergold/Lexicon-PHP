@@ -74,6 +74,14 @@ class frontendDisplayHelper {
 	// Set the debug mode.
 	$this->DEBUG_MODE = $DEBUG_MODE;
 
+	//**************************************************************************************//
+	// Set an array of mode options.
+
+    $mode_options = array();
+
+    $mode_options['words'] = null;
+    $mode_options['phrases'] = null;
+
     //**************************************************************************************//
     // Set the view mode.
 
