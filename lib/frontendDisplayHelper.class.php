@@ -114,6 +114,11 @@ class frontendDisplayHelper {
     }
 
     //**************************************************************************************//
+    // Init the 'textWords()' class.
+
+    $ProcessingClass = new textWords();
+
+    //**************************************************************************************//
     // Get the JSON file contents.
 
     $json_content = file_get_contents($json_filename);
@@ -143,7 +148,8 @@ class frontendDisplayHelper {
 
     //**************************************************************************************//
     // Process the JSON content.
-    $this->json_content = json_encode($word);
+    // $this->json_content = json_encode($word);
+    $this->json_content = $ProcessingClass->json_encode_helper($ProcessingClass->build_image_object($word, $DEBUG_MODE));
 
   } // initContent
 
