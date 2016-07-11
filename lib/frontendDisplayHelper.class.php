@@ -118,12 +118,17 @@ class frontendDisplayHelper {
     $json_content = file_get_contents($json_filename);
 
     //**************************************************************************************//
-    // Decode the JSON file contents.
+    // Decode the JSON file contents into an array.
 
-    $json_decoded = json_decode($json_content, FALSE);
+    $json_decoded = json_decode($json_content, TRUE);
+
+    //**************************************************************************************//
+	// Array keys of the data.
 
 	if (TRUE) {
 		echo '<pre>';
+		// print_r($json_decoded['data']['attributes']['basic']);
+		// print_r($json_decoded['data']['attributes']);
 		print_r($json_decoded);
 		echo '<pre>';
 		die();
