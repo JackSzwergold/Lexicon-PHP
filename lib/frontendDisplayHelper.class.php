@@ -82,6 +82,7 @@ class frontendDisplayHelper {
 
     $mode_options['words'] = null;
     $mode_options['phrases'] = null;
+    $mode_options['store_sign_slugs'] = null;
 
     //**************************************************************************************//
     // Set the view mode.
@@ -98,7 +99,7 @@ class frontendDisplayHelper {
     //**************************************************************************************//
     // Set the JSON directory.
 
-    $json_dir = 'lib/';
+    $json_dir = 'data/';
 
     //**************************************************************************************//
     // Set the JSON filename.
