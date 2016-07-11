@@ -406,18 +406,24 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the body header.
 
-      $header = '<div class="Header">'
-              . $this->header_content
-              . '</div>'
-              ;
+      $header = '';
+      if (!empty($this->header_content)) {
+		  $header = '<div class="Header">'
+				  . $this->header_content
+				  . '</div>'
+				  ;
+      }
 
       //**********************************************************************************//
       // Set the body footer.
 
-      $footer = '<div class="Footer">'
-              . $this->footer_content
-              . '</div>'
-              ;
+      $footer = '';
+      if (!empty($this->footer_content)) {
+		  $footer = '<div class="Footer">'
+				  . $this->footer_content
+				  . '</div>'
+				  ;
+      }
 
       //**********************************************************************************//
       // Set the view wrapper.

@@ -126,12 +126,12 @@ $frontendDisplayClass->setAdBanner($AMAZON_RECOMMENDATION);
 $frontendDisplayClass->initCoreContent();
 
 // Set the header.
-$navigation = $frontendDisplayClass->setNavigation();
-$frontendDisplayClass->setBodyHeader($navigation);
+// $navigation = $frontendDisplayClass->setNavigation();
+// $frontendDisplayClass->setBodyHeader($navigation);
 
 // Set the footer.
-$ad_banner = $frontendDisplayClass->setAdBannerFinal();
-$frontendDisplayClass->setBodyFooter($ad_banner);
+// $ad_banner = $frontendDisplayClass->setAdBannerFinal();
+// $frontendDisplayClass->setBodyFooter($ad_banner);
 
 //**************************************************************************************//
 // Init and display the final content.
