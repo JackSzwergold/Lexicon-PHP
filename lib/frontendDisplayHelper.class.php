@@ -149,7 +149,8 @@ class frontendDisplayHelper {
     //**************************************************************************************//
     // Process the JSON content.
     // $this->json_content = json_encode($word);
-    $this->json_content = $ProcessingClass->json_encode_helper($ProcessingClass->build_image_object($word, $DEBUG_MODE));
+    $word_object = $ProcessingClass->build_image_object($word, $DEBUG_MODE);
+    $this->json_content = $ProcessingClass->json_encode_helper($word_object);
 
   } // initContent
 
