@@ -97,7 +97,7 @@ class frontendDisplayHelper {
     $json_content = file_get_contents($json_filename);
 
     // Set the body content.
-    $this->html_content = 'HTML Content';
+    $this->html_content = 'HTML content could go here.';
 
     // Process the JSON content.
     $this->json_content = $json_content;
