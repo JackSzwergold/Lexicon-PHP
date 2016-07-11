@@ -32,7 +32,7 @@ class frontendDisplayHelper {
   private $page_base_suffix = '';
   private $page_title = '';
 
-  private $url_parts = '';
+  private $url_parts = array();
   private $VIEW_MODE = 'words';
   private $DEBUG_MODE = FALSE;
   private $html_content = '';
