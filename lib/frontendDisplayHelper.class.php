@@ -99,7 +99,14 @@ class frontendDisplayHelper {
     //**************************************************************************************//
     // Decode the JSON file contents.
 
-    $json_decoded = json_decode($json_content);
+    $json_decoded = json_decode($json_content, FALSE);
+
+	if (TRUE) {
+		echo '<pre>';
+		print_r($json_decoded->phrases);
+		echo '<pre>';
+		die();
+	}
 
     // Set the body content.
     $this->html_content = 'HTML content could go here.';
