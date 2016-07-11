@@ -103,7 +103,7 @@ class frontendDisplayHelper {
 
 	if (TRUE) {
 		echo '<pre>';
-		print_r($json_decoded->phrases);
+		print_r($json_decoded);
 		echo '<pre>';
 		die();
 	}
