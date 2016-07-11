@@ -138,9 +138,9 @@ class frontendDisplayHelper {
     //**************************************************************************************//
 	// Now select the array based on the random key, shuffle it and select a random word.
 
-    $word_array = $json_decoded['data']['attributes'][$json_array_key];
-    shuffle($word_array);
-    $word = $word_array[0];
+    $raw_word_array = $json_decoded['data']['attributes'][$json_array_key];
+    shuffle($raw_word_array);
+    $word_array = array_slice($raw_word_array, 0, 1);
 
     //**************************************************************************************//
     // Set the body content.
@@ -148,9 +148,8 @@ class frontendDisplayHelper {
 
     //**************************************************************************************//
     // Process the JSON content.
-    // $this->json_content = json_encode($word);
-    $word_object = $ProcessingClass->build_image_object($word, $DEBUG_MODE);
-    $this->json_content = $ProcessingClass->json_encode_helper($word_object);
+    $word_object = $ProcessingClass->build_content_object($word_array, $this->page_base, $this->page_base_suffix, array_keys($mode_options));
+    $this->json_content = $ProcessingClass->json_encode_helper($word_object, $DEBUG_MODE);
 
   } // initContent
 

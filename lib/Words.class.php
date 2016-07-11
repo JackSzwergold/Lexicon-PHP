@@ -229,8 +229,8 @@ class textWords {
   } // build_image_data_object
 
 
-  // Build the image object.
-  function build_image_object ($image_object_array, $page_base, $page_base_suffix, $extra_endpoints) {
+  // Build the content object.
+  function build_content_object ($content_object_array, $page_base, $page_base_suffix, $extra_endpoints) {
 
     // Create the data JSON object.
     $parent_obj = new stdClass();
@@ -246,13 +246,13 @@ class textWords {
 
     // Set the image data array to the image object.
     $child_obj = new stdClass();
-    $child_obj->type = 'images';
-    $child_obj->attributes = $image_object_array;
+    $child_obj->type = 'text';
+    $child_obj->attributes = $content_object_array;
     $parent_obj->data = $child_obj;
 
     return $parent_obj;
 
-  } // build_image_object
+  } // build_content_object
 
 
   // JSON encoding helper.
