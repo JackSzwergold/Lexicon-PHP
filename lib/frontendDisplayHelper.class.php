@@ -129,20 +129,18 @@ class frontendDisplayHelper {
     shuffle($json_array_keys);
     $json_array_key = $json_array_keys[0];
 
-	if (TRUE) {
-		echo '<pre>';
-		// print_r($json_decoded['data']['attributes']['basic']);
-		// print_r($json_decoded['data']['attributes']);
-		print_r($json_decoded);
-		echo '<pre>';
-		die();
-	}
+    //**************************************************************************************//
+	// Now select the array based on the random key, shuffle it and select a random word.
+
+    $word_array = $json_decoded['data']['attributes'][$json_array_key];
+    shuffle($word_array);
+    $word = $word_array[0];
 
     // Set the body content.
-    $this->html_content = 'HTML content could go here.';
+    $this->html_content = $word;
 
     // Process the JSON content.
-    $this->json_content = $json_content;
+    $this->json_content = json_encode($word);
 
   } // initContent
 
