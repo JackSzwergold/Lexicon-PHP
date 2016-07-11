@@ -51,7 +51,7 @@ $JSON_MODE = array_key_exists('json', $params);
 // Set the page base.
 
 $page_base = BASE_URL;
-$controller = 'large';
+$controller = 'small';
 if (array_key_exists('controller', $params) && !empty($params['controller']) && $params['controller'] != 'index') {
   $controller = $params['controller'];
   $page_base = BASE_URL . $params['controller'] . '/';
@@ -105,7 +105,7 @@ $frontendDisplayClass->setPageDescription($SITE_DESCRIPTION);
 $frontendDisplayClass->setPageContent($html_content);
 $frontendDisplayClass->setPageDivs($PAGE_DIVS_ARRAY);
 $frontendDisplayClass->setPageDivWrapper('PixelBoxWrapper');
-// $frontendDisplayClass->setPageViewport($SITE_VIEWPORT);
+$frontendDisplayClass->setPageViewport($SITE_VIEWPORT);
 $frontendDisplayClass->setPageRobots($SITE_ROBOTS);
 $frontendDisplayClass->setJavaScriptItems($JAVASCRIPTS_ITEMS);
 $frontendDisplayClass->setCSSItems($CSS_ITEMS);

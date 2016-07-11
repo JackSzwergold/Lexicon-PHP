@@ -23,16 +23,16 @@
 
 // Set the base URL path.
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
-  define('BASE_PATH', '/ASCII-PHP/');
+  define('BASE_PATH', '/Mosaic-PHP/');
 }
 else {
-  define('BASE_PATH', '/projects/ascii/');
+  define('BASE_PATH', '/projects/mosaic/');
 }
 
 // Site descriptive info.
-$SITE_TITLE = 'ASCII';
-$SITE_DESCRIPTION = 'A dynamically generated ASCII art image using php, the GD graphics library, HTML &amp; CSS.';
-$SITE_URL = 'http://www.preworn.com/projects/ascii/';
+$SITE_TITLE = 'Mosaic';
+$SITE_DESCRIPTION = 'A dynamically generated image mosaic using PHP, the GD graphics library, HTML &amp; CSS.';
+$SITE_URL = 'http://www.preworn.com/projects/mosaic/';
 $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.';
 $SITE_ROBOTS = 'noindex, nofollow';
 $SITE_VIEWPORT = 'width=device-width, initial-scale=0.65, maximum-scale=2, minimum-scale=0.65, user-scalable=yes';
@@ -58,7 +58,7 @@ $FAVICONS['ipad']['href'] = 'favicons/apple-touch-icon-72x72-precomposed.png';
 $PAYMENT_INFO = array();
 $PAYMENT_INFO['amazon']['short_name'] = 'Amazon';
 $PAYMENT_INFO['amazon']['emoji'] = '🎥📚📀';
-$PAYMENT_INFO['amazon']['url'] = 'http://www.amazon.com/?tag=preworn-20';
+$PAYMENT_INFO['amazon']['url'] = 'http://www.amazon.com/?tag=lastplacechamp-20';
 $PAYMENT_INFO['amazon']['description'] = 'Support me when you buy things on Amazon with this link.';
 $PAYMENT_INFO['paypal']['short_name'] = 'PayPal';
 $PAYMENT_INFO['paypal']['emoji'] = '💰💸💳';
