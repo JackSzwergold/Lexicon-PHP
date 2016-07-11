@@ -74,11 +74,21 @@ class frontendDisplayHelper {
 	// Set the debug mode.
 	$this->DEBUG_MODE = $DEBUG_MODE;
 
+    $json_dir = 'lib/';
+
+    $json_filename = $json_dir . 'words.json';
+
+    if (!is_file($json_filename)) {
+      die('Sorry. The required JSON file could not be found.');
+    }
+
+    $json_content = file_get_contents($json_filename);
+
     // Set the body content.
     $this->html_content = 'HTML Content';
 
     // Process the JSON content.
-    $this->json_content = 'JSON Content';
+    $this->json_content = $json_content;
 
   } // initContent
 
