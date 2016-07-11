@@ -23,16 +23,16 @@
 
 // Set the base URL path.
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
-  define('BASE_PATH', '/Mosaic-PHP/');
+  define('BASE_PATH', '/Words-PHP/');
 }
 else {
-  define('BASE_PATH', '/projects/mosaic/');
+  define('BASE_PATH', '/projects/words/');
 }
 
 // Site descriptive info.
-$SITE_TITLE = 'Mosaic';
-$SITE_DESCRIPTION = 'A dynamically generated image mosaic using PHP, the GD graphics library, HTML &amp; CSS.';
-$SITE_URL = 'http://www.preworn.com/projects/mosaic/';
+$SITE_TITLE = 'Words';
+$SITE_DESCRIPTION = 'A word and phrase API.';
+$SITE_URL = 'http://www.preworn.com/projects/words/';
 $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.';
 $SITE_ROBOTS = 'noindex, nofollow';
 $SITE_VIEWPORT = 'width=device-width, initial-scale=0.65, maximum-scale=2, minimum-scale=0.65, user-scalable=yes';
@@ -81,11 +81,11 @@ $PAGE_DIVS_ARRAY[] = 'Padding';
 
 // Set the JavaScript array.
 $JAVASCRIPTS_ITEMS = array();
-$JAVASCRIPTS_ITEMS[] = 'script/json2.js';
-$JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery-1.11.3.min.js';
-$JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery-1.11.3.min.map';
-$JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery.noconflict.js';
-$JAVASCRIPTS_ITEMS[] = 'script/common.js';
+// $JAVASCRIPTS_ITEMS[] = 'script/json2.js';
+// $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery-1.11.3.min.js';
+// $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery-1.11.3.min.map';
+// $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery.noconflict.js';
+// $JAVASCRIPTS_ITEMS[] = 'script/common.js';
     
 // Set the CSS array.
 $CSS_ITEMS = array();
