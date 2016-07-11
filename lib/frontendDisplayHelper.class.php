@@ -83,6 +83,7 @@ class frontendDisplayHelper {
     $mode_options['words'] = null;
     $mode_options['phrases'] = null;
     $mode_options['store_sign_slugs'] = null;
+    $mode_options['non_curses'] = null;
 
     //**************************************************************************************//
     // Set the view mode.
