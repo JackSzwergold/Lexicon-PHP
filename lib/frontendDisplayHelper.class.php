@@ -149,7 +149,7 @@ class frontendDisplayHelper {
 
     //**************************************************************************************//
     // Set the body content.
-    $this->html_content = implode(',', $word_array);
+    $this->html_content = sprintf('<h2>%s</h2', implode(',', $word_array['content']));
 
     //**************************************************************************************//
     // Process the JSON content.
