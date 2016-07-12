@@ -139,9 +139,13 @@ class frontendDisplayHelper {
     //**************************************************************************************//
 	// Now select the array based on the random key, shuffle it and select a random word.
 
+    $word_offset = 0;
+    $word_slice = 1;
     $raw_word_array = $json_decoded['data']['attributes'][$json_array_key];
     shuffle($raw_word_array);
-    $word_array = array_slice($raw_word_array, 0, 1);
+    $word_array['content'] = array_slice($raw_word_array, $word_offset, $word_slice);
+    $word_array['count'] = count($word_array['content']);
+    $word_array['total'] = count($raw_word_array);
 
     //**************************************************************************************//
     // Set the body content.
