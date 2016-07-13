@@ -135,7 +135,8 @@ class frontendDisplayHelper {
 	// Get the array keys, shuffle them and select one random key.
 
     $json_array_keys = array_keys($json_decoded['data']['attributes']);
-    if (FALSE) {
+    $json_array_key = null;
+    if (!count(array_filter(array_keys($json_decoded['data']['attributes']), 'is_string')) > 0) {
       shuffle($json_array_keys);
       $json_array_key = $json_array_keys[0];
     }
@@ -145,7 +146,7 @@ class frontendDisplayHelper {
 
     $word_offset = 0;
     $word_amount = 1;
-    if (FALSE) {
+    if (is_string($json_array_key)) {
       $raw_word_array = $json_decoded['data']['attributes'][$json_array_key];
     }
     else {
