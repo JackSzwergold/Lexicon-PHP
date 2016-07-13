@@ -157,8 +157,8 @@ $LINK_ITEMS['author']['rel'] = 'author';
 $LINK_ITEMS['author']['href'] = 'https://plus.google.com/+JackSzwergold';
 
 // Set the controller and parameter stuff.
-$VALID_CONTROLLERS = array('controller');
-$DISPLAY_CONTROLLERS = array('controller');
-$VALID_GET_PARAMETERS = array('_debug', 'json', 'controller');
+$VALID_CONTROLLERS = array('parent');
+$DISPLAY_CONTROLLERS = array('parent');
+$VALID_GET_PARAMETERS = array('_debug', 'json', 'parent', 'child', 'grandchild', 'greatgrandchild');
 
 ?>

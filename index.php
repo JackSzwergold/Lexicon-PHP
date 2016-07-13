@@ -52,11 +52,17 @@ $JSON_MODE = array_key_exists('json', $params);
 // Set the page base.
 
 $page_base = BASE_URL;
-$controller = 'words';
+$controller = 'basic';
 $url_parts = array();
-if (array_key_exists('controller', $params) && !empty($params['controller']) && $params['controller'] != 'index') {
-  $controller = $params['controller'];
-  $page_base = BASE_URL . $params['controller'] . '/';
+$controller_parts = array('parent', 'child', 'grandchild', 'greatgrandchild');
+foreach ($controller_parts as $part) {
+  if (array_key_exists($part, $params) && !empty($params[$part]) && $params[$part] != 'index') {
+    $url_parts[$part] = rawurlencode($params[$part]);
+  }
+}
+if (!empty($url_parts)) {
+  $controller = implode($url_parts, '/');
+  $page_base = BASE_URL . $controller . '/';
 }
 
 //**************************************************************************************//
