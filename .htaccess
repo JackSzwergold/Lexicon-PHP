@@ -15,7 +15,8 @@ RewriteRule ^(clients|art|css|favicons|script)($|/) - [L]
 # This redirects any call to this directory to an index file with $_GET parameters.
 # The 'parent=$1&child=$2&grandchild=$3&greatgrandchild=$4' passes the pathname as an HTML param called 'parent', 'child', 'grandchild' and 'greatgrandchild'.
 # RewriteRule     ^([A-Za-z0-9-_,\s]+)/?([^/]*)$       index.php?parent=$1&$2 [QSA]
-# RewriteRule     ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1&child=$2&grandchild=$3&greatgrandchild=$4 [L]
+RewriteRule     ^([A-Za-z0-9-_,\s]+)/?([^/]*)$       index.php?parent=$1 [QSA]
+RewriteRule     ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1&child=$2&grandchild=$3&greatgrandchild=$4 [L]
 RewriteRule     ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1&child=$2&grandchild=$3 [L]
 RewriteRule     ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$   index.php?parent=$1&child=$2 [L]
 

@@ -52,10 +52,6 @@ class contentCreation {
   function process_get_parameters () {
     global $VALID_GET_PARAMETERS;
 
-echo '<pre>';
-print_r($_GET);
-echo '</pre>';
-
     // Roll through the GET parameters and validate them.
     $params = array();
     foreach($VALID_GET_PARAMETERS as $key => $value) {
