@@ -33,7 +33,7 @@ class frontendDisplayHelper {
   private $page_title = '';
 
   private $url_parts = array();
-  private $VIEW_MODE = 'words';
+  private $VIEW_MODE = 'basic';
   private $DEBUG_MODE = FALSE;
   private $html_content = '';
   private $json_content = '';
@@ -80,7 +80,11 @@ class frontendDisplayHelper {
 
     $mode_options = array();
 
-    $mode_options['words'] = null;
+    $mode_options['annoying'] = null;
+    $mode_options['artisanal'] = null;
+    $mode_options['basic'] = null;
+    $mode_options['non_words'] = null;
+
     $mode_options['phrases'] = null;
     $mode_options['store_sign_slugs'] = null;
     $mode_options['non_curses'] = null;
@@ -94,7 +98,7 @@ class frontendDisplayHelper {
       $this->VIEW_MODE = $mode_keys[0];
     }
     else if (!empty($this->VIEW_MODE) && !array_key_exists($this->VIEW_MODE, $mode_options)) {
-      $this->VIEW_MODE = 'words';
+      $this->VIEW_MODE = 'basic';
     }
 
     //**************************************************************************************//
@@ -129,21 +133,23 @@ class frontendDisplayHelper {
 
     $json_decoded = json_decode($json_content, TRUE);
 
+
     //**************************************************************************************//
 	// Get the array keys, shuffle them and select one random key.
 
     $json_array_keys = array_keys($json_decoded['data']['attributes']);
-    shuffle($json_array_keys);
-    $json_array_key = $json_array_keys[0];
+    // shuffle($json_array_keys);
+    // $json_array_key = $json_array_keys[0];
 
-    //**************************************************************************************//
+   //**************************************************************************************//
 	// Now select the array based on the random key, shuffle it and select a random word.
 
     $word_offset = 0;
-    $word_slice = 1;
-    $raw_word_array = $json_decoded['data']['attributes'][$json_array_key];
+    $word_amount = 1;
+    // $raw_word_array = $json_decoded['data']['attributes'][$json_array_key];
+    $raw_word_array = $json_decoded['data']['attributes'];
     shuffle($raw_word_array);
-    $word_array['content'] = array_slice($raw_word_array, $word_offset, $word_slice);
+    $word_array['content'] = array_slice($raw_word_array, $word_offset, $word_amount);
     $word_array['count'] = count($word_array['content']);
     $word_array['total'] = count($raw_word_array);
 
