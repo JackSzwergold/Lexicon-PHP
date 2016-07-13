@@ -20,7 +20,7 @@
 //**************************************************************************************//
 // Require the basics.
 
-require_once BASE_FILEPATH . '/lib/Words.class.php';
+require_once BASE_FILEPATH . '/lib/Lexicon.class.php';
 
 //**************************************************************************************//
 // The beginnings of a front end display helper class.

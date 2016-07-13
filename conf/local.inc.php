@@ -23,16 +23,16 @@
 
 // Set the base URL path.
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
-  define('BASE_PATH', '/Words-PHP/');
+  define('BASE_PATH', '/Lexicon-PHP/');
 }
 else {
-  define('BASE_PATH', '/projects/words/');
+  define('BASE_PATH', '/projects/lexicon/');
 }
 
 // Site descriptive info.
-$SITE_TITLE = 'Words';
+$SITE_TITLE = 'Lexicon';
 $SITE_DESCRIPTION = 'A word and phrase API.';
-$SITE_URL = 'http://www.preworn.com/projects/words/';
+$SITE_URL = 'http://www.preworn.com/projects/lexicon/';
 $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.';
 $SITE_LICENSE_CODE = 'CC-BY-NC-SA-4.0';
 $SITE_LICENSE = 'This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0)';
@@ -41,7 +41,7 @@ $SITE_ROBOTS = 'noindex, nofollow';
 $SITE_VIEWPORT = 'width=device-width, initial-scale=1.0';
 $SITE_IMAGE = 'favicons/icon_200x200.png';
 $SITE_FB_ADMINS = '504768652';
-$SITE_KEYWORD = 'words';
+$SITE_KEYWORD = 'lexicon';
 
 // Favicon info.
 $FAVICONS = array();

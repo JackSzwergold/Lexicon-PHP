@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Words Class (Words.class.php) (c) by Jack Szwergold
+ * Lexicon Class (Lexicon.class.php) (c) by Jack Szwergold
  *
- * Words Class is licensed under a
+ * Lexicon Class is licensed under a
  * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
  *
  * You should have received a copy of the license along with this

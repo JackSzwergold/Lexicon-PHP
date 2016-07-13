@@ -1,9 +1,9 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'words'
-set :short_name, 'words'
-set :repo_url, 'git@github.com:JackSzwergold/Words-PHP.git'
+set :application, 'lexicon'
+set :short_name, 'lexicon'
+set :repo_url, 'git@github.com:JackSzwergold/Lexicon-PHP.git'
 
 # Set the 'deploy_to' directory.
 set :deploy_to, '/var/www'
