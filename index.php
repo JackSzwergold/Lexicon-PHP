@@ -81,6 +81,7 @@ $frontendDisplayHelperClass = new frontendDisplayHelper();
 $frontendDisplayHelperClass->setController($controller);
 $frontendDisplayHelperClass->setPageBase($page_base);
 $frontendDisplayHelperClass->setPageBaseSuffix($page_base_suffix);
+$frontendDisplayHelperClass->setCount(array_key_exists('count', $params) ? $params['count'] : 1);
 
 //**************************************************************************************//
 // Init the content via the class.

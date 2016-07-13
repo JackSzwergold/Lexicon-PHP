@@ -95,7 +95,8 @@ ul, li
 
 /**************************************************************************************************/
 .Core h1 { line-height: 0.9em; }
-.Core h2, .Core h3, .Core h4, .Core h5, .Core h6 { line-height: 1em; }
+.Core h2 { line-height: 1.2em; }
+.Core h3, .Core h4, .Core h5, .Core h6 { line-height: 1em; }
 
 .Core h1, .Core h2, .Core h3, .Core h4, .Core h5, .Core h6
 {

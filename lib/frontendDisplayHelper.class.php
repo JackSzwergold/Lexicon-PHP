@@ -31,6 +31,7 @@ class frontendDisplayHelper {
   private $page_base = '';
   private $page_base_suffix = '';
   private $page_title = '';
+  private $count = 1;
 
   private $url_parts = array();
   private $VIEW_MODE = 'basic';
@@ -63,6 +64,15 @@ class frontendDisplayHelper {
       $this->page_base_suffix = $value;
     }
   } // setPageBaseSuffix
+
+
+  //**************************************************************************************//
+  // Set the count.
+  public function setCount ($value) {
+    if (!empty($value)) {
+      $this->count = $value;
+    }
+  } // setCount
 
 
   public function initContent ($DEBUG_MODE = FALSE) {
@@ -129,7 +139,6 @@ class frontendDisplayHelper {
 
     $json_decoded = json_decode($json_content, TRUE);
 
-
     //**************************************************************************************//
 	// Get the array keys, shuffle them and select one random key.
 
@@ -138,12 +147,12 @@ class frontendDisplayHelper {
     shuffle($json_array_keys);
     $json_array_key = $json_array_keys[0];
 
-   //**************************************************************************************//
+    //**************************************************************************************//
 	// Now select the array based on the random key, shuffle it and select a random word.
 
     $word_offset = 0;
-    $word_amount = 1;
     $raw_word_array = $json_decoded['data']['attributes'];
+    $word_amount = ($this->count < count($raw_word_array) ? $this->count : count($raw_word_array));
     shuffle($raw_word_array);
     $word_array['content'] = array_slice($raw_word_array, $word_offset, $word_amount);
     $word_array['count'] = count($word_array['content']);
@@ -151,7 +160,7 @@ class frontendDisplayHelper {
 
     //**************************************************************************************//
     // Set the body content.
-    $this->html_content = sprintf('<h2>%s</h2', implode(',', $word_array['content']));
+    $this->html_content = sprintf('<h2>%s</h2>', implode(' • ', $word_array['content']));
 
     //**************************************************************************************//
     // Process the JSON content.
