@@ -84,6 +84,7 @@ class frontendDisplayHelper {
     $mode_options['artisanal'] = null;
     $mode_options['basic'] = null;
     $mode_options['non_words'] = null;
+    $mode_options['non_curses'] = null;
 
     //**************************************************************************************//
     // Set the view mode.
@@ -134,16 +135,22 @@ class frontendDisplayHelper {
 	// Get the array keys, shuffle them and select one random key.
 
     $json_array_keys = array_keys($json_decoded['data']['attributes']);
-    // shuffle($json_array_keys);
-    // $json_array_key = $json_array_keys[0];
+    if (FALSE) {
+      shuffle($json_array_keys);
+      $json_array_key = $json_array_keys[0];
+    }
 
    //**************************************************************************************//
 	// Now select the array based on the random key, shuffle it and select a random word.
 
     $word_offset = 0;
     $word_amount = 1;
-    // $raw_word_array = $json_decoded['data']['attributes'][$json_array_key];
-    $raw_word_array = $json_decoded['data']['attributes'];
+    if (FALSE) {
+      $raw_word_array = $json_decoded['data']['attributes'][$json_array_key];
+    }
+    else {
+      $raw_word_array = $json_decoded['data']['attributes'];
+    }
     shuffle($raw_word_array);
     $word_array['content'] = array_slice($raw_word_array, $word_offset, $word_amount);
     $word_array['count'] = count($word_array['content']);
