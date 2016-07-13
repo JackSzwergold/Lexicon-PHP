@@ -20,7 +20,7 @@
 //**************************************************************************************//
 // Here is where the magic happens!
 
-class textWords {
+class textLexicon {
 
   public $DEBUG_MODE = FALSE;
 
@@ -75,6 +75,6 @@ class textWords {
 
   } // json_encode_helper
 
-} // textWords
+} // textLexicon
 
 ?>

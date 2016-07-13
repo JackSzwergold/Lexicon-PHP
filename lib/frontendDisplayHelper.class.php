@@ -125,9 +125,9 @@ class frontendDisplayHelper {
     }
 
     //**************************************************************************************//
-    // Init the 'textWords()' class.
+    // Init the 'textLexicon()' class.
 
-    $ProcessingClass = new textWords();
+    $ProcessingClass = new textLexicon();
 
     //**************************************************************************************//
     // Get the JSON file contents.
