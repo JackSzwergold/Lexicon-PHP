@@ -75,6 +75,24 @@ class frontendDisplayHelper {
   } // setCount
 
 
+  //**************************************************************************************//
+  // Filter the view mode.
+  public function filterViewMode ($mode = null, $mode_options) {
+
+    if (!empty($mode) && $mode == 'random') {
+      $mode_keys = array_keys($mode_options);
+      shuffle($mode_keys);
+      $mode = $mode_keys[0];
+    }
+    else if (!empty($mode) && !array_key_exists($mode, $mode_options)) {
+      $mode = 'basic';
+    }
+
+    return $mode;
+
+  } // filterViewMode
+
+
   public function initContent ($DEBUG_MODE = FALSE) {
 
  	//**************************************************************************************//
@@ -98,19 +116,19 @@ class frontendDisplayHelper {
     //**************************************************************************************//
     // Set the view mode.
 
-    if (!empty($this->VIEW_MODE) && $this->VIEW_MODE == 'random') {
-      $mode_keys = array_keys($mode_options);
-      shuffle($mode_keys);
-      $this->VIEW_MODE = $mode_keys[0];
-    }
-    else if (!empty($this->VIEW_MODE) && !array_key_exists($this->VIEW_MODE, $mode_options)) {
-      $this->VIEW_MODE = 'basic';
-    }
+    $this->VIEW_MODE = $this->filterViewMode($this->VIEW_MODE, $mode_options);
 
     //**************************************************************************************//
     // Set the JSON directory.
 
     $json_dir = 'data/';
+
+    //**************************************************************************************//
+    // Check if there is an image directory. If not? Exit.
+
+    if (!is_dir($json_dir)) {
+      die('Sorry. The required data directory could not found.');
+    }
 
     //**************************************************************************************//
     // Set the JSON filename.
