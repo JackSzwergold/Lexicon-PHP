@@ -103,9 +103,9 @@ class frontendDisplayHelper {
       shuffle($mode_keys);
       $this->VIEW_MODE = $mode_keys[0];
     }
-    // else if (!empty($this->VIEW_MODE) && !array_key_exists($this->VIEW_MODE, $mode_options)) {
-    //   $this->VIEW_MODE = 'basic';
-    // }
+    else if (!empty($this->VIEW_MODE) && !array_key_exists($this->VIEW_MODE, $mode_options)) {
+      $this->VIEW_MODE = 'basic';
+    }
 
     //**************************************************************************************//
     // Set the JSON directory.
