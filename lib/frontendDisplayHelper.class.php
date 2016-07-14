@@ -34,7 +34,7 @@ class frontendDisplayHelper {
   private $count = 1;
 
   private $url_parts = array();
-  private $VIEW_MODE = 'basic';
+  private $VIEW_MODE = null;
   private $DEBUG_MODE = FALSE;
   private $html_content = '';
   private $json_content = '';
@@ -103,9 +103,9 @@ class frontendDisplayHelper {
       shuffle($mode_keys);
       $this->VIEW_MODE = $mode_keys[0];
     }
-    else if (!empty($this->VIEW_MODE) && !array_key_exists($this->VIEW_MODE, $mode_options)) {
-      $this->VIEW_MODE = 'basic';
-    }
+    // else if (!empty($this->VIEW_MODE) && !array_key_exists($this->VIEW_MODE, $mode_options)) {
+    //   $this->VIEW_MODE = 'basic';
+    // }
 
     //**************************************************************************************//
     // Set the JSON directory.

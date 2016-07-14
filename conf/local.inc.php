@@ -42,6 +42,7 @@ $SITE_VIEWPORT = 'width=device-width, initial-scale=1.0';
 $SITE_IMAGE = 'favicons/icon_200x200.png';
 $SITE_FB_ADMINS = '504768652';
 $SITE_KEYWORD = 'lexicon';
+$SITE_DEFAULT_CONTROLLER = 'basic';
 
 // Favicon info.
 $FAVICONS = array();
