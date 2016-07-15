@@ -168,15 +168,7 @@ class frontendDisplayHelper {
     $json_decoded = json_decode($json_content, TRUE);
 
     //**************************************************************************************//
-	// Get the array keys, shuffle them and select one random key.
-
-    $json_array_keys = array_keys($json_decoded['data']['attributes']);
-    $json_array_key = null;
-    shuffle($json_array_keys);
-    $json_array_key = $json_array_keys[0];
-
-    //**************************************************************************************//
-	// Now select the array based on the random key, shuffle it and select a random word.
+	// Select the array based on the random key, shuffle it and select a random word.
 
     $word_offset = 0;
     $raw_word_array = $json_decoded['data']['attributes'];
