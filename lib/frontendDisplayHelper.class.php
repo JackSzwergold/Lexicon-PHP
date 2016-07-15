@@ -41,7 +41,7 @@ class frontendDisplayHelper {
   private $json_content = '';
 
   //**************************************************************************************//
-  // Set the selected controller.
+  // Set the default controller.
   public function setDefaultController ($value) {
     if (!empty($value)) {
       $this->controller_default = $value;
