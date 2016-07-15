@@ -171,10 +171,12 @@ class frontendDisplayHelper {
 	// Select the array based on the random key, shuffle it and select a random word.
 
     $word_offset = 0;
+    $word_count = ($this->count < count($raw_word_array) ? $this->count : count($raw_word_array));
+
     $raw_word_array = $json_decoded['data']['attributes'];
-    $word_amount = ($this->count < count($raw_word_array) ? $this->count : count($raw_word_array));
     shuffle($raw_word_array);
-    $word_array['content'] = array_slice($raw_word_array, $word_offset, $word_amount);
+
+    $word_array['content'] = array_slice($raw_word_array, $word_offset, $word_count);
     $word_array['count'] = count($word_array['content']);
     $word_array['total'] = count($raw_word_array);
 
