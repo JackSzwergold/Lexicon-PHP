@@ -72,6 +72,22 @@ class requestFiltering {
   } // process_parameters
 
   //**************************************************************************************//
+  // Process the debug mode.
+  function process_debug_mode ($params = array()) {
+
+    return array_key_exists('_debug', $params);
+
+  } // process_debug_mode
+
+  //**************************************************************************************//
+  // Process the JSON mode.
+  function process_json_mode ($params = array()) {
+
+    return array_key_exists('json', $params);
+
+  } // process_json_mode
+
+  //**************************************************************************************//
   // Set the markdown file.
   function process_markdown_file ($params = array()) {
 

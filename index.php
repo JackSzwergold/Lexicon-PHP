@@ -39,16 +39,8 @@ $requestFilteringClass = new requestFiltering();
 $params = $requestFilteringClass->process_parameters();
 $markdown_file = $requestFilteringClass->process_markdown_file($params);
 $page_title = $requestFilteringClass->process_page_title($params);
-
-//**************************************************************************************//
-// Set the debug mode value.
-
-$DEBUG_MODE = array_key_exists('_debug', $params);
-
-//**************************************************************************************//
-// Set the JSON mode value.
-
-$JSON_MODE = array_key_exists('json', $params);
+$DEBUG_MODE = $requestFilteringClass->process_debug_mode($params);
+$JSON_MODE = $requestFilteringClass->process_json_mode($params);
 
 //**************************************************************************************//
 // Set the page base.
