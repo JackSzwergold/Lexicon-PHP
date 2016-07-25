@@ -42,22 +42,9 @@ $page_title = $requestFilteringClass->process_page_title($params);
 $DEBUG_MODE = $requestFilteringClass->process_debug_mode($params);
 $JSON_MODE = $requestFilteringClass->process_json_mode($params);
 
-//**************************************************************************************//
-// Set the page base.
-
-$page_base = BASE_URL;
-$controller = $SITE_DEFAULT_CONTROLLER;
-$url_parts = array();
-$controller_parts = array('parent', 'child', 'grandchild', 'greatgrandchild');
-foreach ($controller_parts as $part) {
-  if (array_key_exists($part, $params) && !empty($params[$part]) && $params[$part] != 'index') {
-    $url_parts[$part] = rawurlencode($params[$part]);
-  }
-}
-if (!empty($url_parts)) {
-  $controller = implode($url_parts, '/');
-  $page_base = BASE_URL . $controller . '/';
-}
+$url_parts = $requestFilteringClass->process_url_parts($params);
+$controller = $requestFilteringClass->process_controllers($url_parts);
+$page_base = $requestFilteringClass->process_page_base($controller);
 
 //**************************************************************************************//
 // Set the query suffix to the page base.
