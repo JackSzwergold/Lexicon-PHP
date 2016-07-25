@@ -88,6 +88,14 @@ class requestFiltering {
   } // process_json_mode
 
   //**************************************************************************************//
+  // Process the page base suffix.
+  function process_page_base_suffix ($JSON_MODE = false) {
+
+    return $JSON_MODE ? '?json' : '';
+
+  } // process_page_base_suffix
+
+  //**************************************************************************************//
   // Process the URL parts.
   function process_url_parts ($params = array()) {
 
@@ -134,6 +142,8 @@ class requestFiltering {
 
   } // process_page_base
 
+  //**************************************************************************************//
+  //**************************************************************************************//
   //**************************************************************************************//
   // Set the markdown file.
   function process_markdown_file ($params = array()) {

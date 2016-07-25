@@ -37,41 +37,27 @@ require_once BASE_FILEPATH . '/lib/Spyc.php';
 
 $requestFilteringClass = new requestFiltering();
 $params = $requestFilteringClass->process_parameters();
-$markdown_file = $requestFilteringClass->process_markdown_file($params);
-$page_title = $requestFilteringClass->process_page_title($params);
 $DEBUG_MODE = $requestFilteringClass->process_debug_mode($params);
 $JSON_MODE = $requestFilteringClass->process_json_mode($params);
+$page_base_suffix = $requestFilteringClass->process_page_base_suffix($JSON_MODE);
+
+$markdown_file = $requestFilteringClass->process_markdown_file($params);
+$page_title = $requestFilteringClass->process_page_title($params);
 
 $url_parts = $requestFilteringClass->process_url_parts($params);
 $controller = $requestFilteringClass->process_controllers($url_parts);
 $page_base = $requestFilteringClass->process_page_base($controller);
 
 //**************************************************************************************//
-// Set the query suffix to the page base.
-
-$page_base_suffix = $JSON_MODE ? '?json' : '';
-
-//**************************************************************************************//
-// Instantiate the front end display helper class.
+// Now deal with the front end display helper class related stuff.
 
 $frontendDisplayHelperClass = new frontendDisplayHelper();
-
-//**************************************************************************************//
-// Set some values to the front end display helper class.
-
 $frontendDisplayHelperClass->setDefaultController($SITE_DEFAULT_CONTROLLER);
 $frontendDisplayHelperClass->setSelectedController($controller);
 $frontendDisplayHelperClass->setPageBase($page_base);
 $frontendDisplayHelperClass->setPageBaseSuffix($page_base_suffix);
 $frontendDisplayHelperClass->setCount(array_key_exists('count', $params) ? $params['count'] : 1);
-
-//**************************************************************************************//
-// Init the content via the class.
-
 $frontendDisplayHelperClass->initContent($DEBUG_MODE);
-
-//**************************************************************************************//
-// Get values from the front end display helper class.
 
 $VIEW_MODE = $frontendDisplayHelperClass->getViewMode();
 $page_title = $frontendDisplayHelperClass->getPageTitle();
@@ -113,14 +99,6 @@ $frontendDisplayClass->setAdBanner($AMAZON_RECOMMENDATION);
 
 // Set the core content.
 $frontendDisplayClass->initCoreContent();
-
-// Set the header.
-// $navigation = $frontendDisplayClass->setNavigation();
-// $frontendDisplayClass->setBodyHeader($navigation);
-
-// Set the footer.
-// $ad_banner = $frontendDisplayClass->setAdBannerFinal();
-// $frontendDisplayClass->setBodyFooter($ad_banner);
 
 //**************************************************************************************//
 // Init and display the final content.
