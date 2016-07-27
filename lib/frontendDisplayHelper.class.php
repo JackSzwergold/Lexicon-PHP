@@ -55,7 +55,7 @@ class frontendDisplayHelper {
   } // setDefaultController
 
 
- //**************************************************************************************//
+  //**************************************************************************************//
   // Set the selected controller.
   public function setSelectedController ($value) {
 
@@ -73,7 +73,7 @@ class frontendDisplayHelper {
     if (!empty($value)) {
       $this->page_base = $value;
     }
- 
+
   } // setPageBase
 
 
@@ -172,7 +172,7 @@ class frontendDisplayHelper {
 	// Set the view mode.
 	$this->VIEW_MODE = $this->controller_select;
 
- 	//**************************************************************************************//
+	//**************************************************************************************//
 	// Set the debug mode.
 	$this->DEBUG_MODE = $DEBUG_MODE;
 
