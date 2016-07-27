@@ -14,6 +14,7 @@
  *
  * Created: 2016-07-10, js
  * Version: 2016-07-10, js: creation & development
+ *          2016-07-26, js: refactoring and cleanup
  *
  */
 
@@ -75,7 +76,7 @@ class frontendDisplayHelper {
 
 
   //**************************************************************************************//
-  // Set the page base.
+  // Set the page base suffix.
   public function setPageBaseSuffix ($value) {
 
     if (!empty($value)) {
