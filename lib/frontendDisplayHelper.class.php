@@ -13,7 +13,7 @@
  * e: me@preworn.com
  *
  * Created: 2016-07-10, js
- * Version: 2016-07-10, js: creation & development
+ * Version: 2016-07-10, js: creation and development
  *          2016-07-26, js: refactoring and cleanup
  *
  */
