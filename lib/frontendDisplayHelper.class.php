@@ -150,7 +150,7 @@ class frontendDisplayHelper {
   //**************************************************************************************//
   //**************************************************************************************//
   // Filter the view mode.
-  public function filterViewMode ($mode = null, $mode_options) {
+  private function filterViewMode ($mode = null, $mode_options) {
 
     if (!empty($mode) && $mode == 'random') {
       $mode_keys = array_keys($mode_options);
