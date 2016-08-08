@@ -110,6 +110,13 @@
 				"It is truly unique.",
 				"You are truly unique.",
 				"Life full of surprises."
+			],
+			"nogood": [
+				"Here, take this.",
+				"Let me tell you something about something.",
+				"It’ll only take a second.",
+				"That’s no big deal.",
+				"You’d like this."
 			]
 		}
 	}
