@@ -97,6 +97,7 @@ $frontendDisplayClass->setPageBase($page_base . $page_query_string_append);
 $frontendDisplayClass->setPageURLParts($params);
 $frontendDisplayClass->setSocialMediaInfo($SOCIAL_MEDIA_INFO);
 $frontendDisplayClass->setAdBanner($AMAZON_RECOMMENDATION);
+$frontendDisplayClass->setRefresh($SITE_REFRESH);
 
 //**************************************************************************************//
 // Init the core content and set the header and footer items.

@@ -42,6 +42,7 @@ $SITE_IMAGE = 'favicons/icon_200x200.png';
 $SITE_FB_ADMINS = '504768652';
 $SITE_KEYWORD = 'lexicon';
 $SITE_DEFAULT_CONTROLLER = 'basic';
+$SITE_REFRESH = 1.5;
 
 // Favicon info.
 $FAVICONS = array();

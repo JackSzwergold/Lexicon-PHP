@@ -64,6 +64,7 @@ class frontendDisplay {
   private $page_keyword = NULL;
   private $page_date = NULL;
   private $page_author = NULL;
+  private $page_refresh = NULL;
 
   private $header_content = NULL;
   private $footer_content = NULL;
@@ -325,6 +326,13 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Set the body footer.
+  function setRefresh($page_refresh = null) {
+    $this->page_refresh = $page_refresh;
+  } // setRefresh
+
+
+  //**************************************************************************************//
   // Init the core content.
   function initCoreContent($response_header = NULL) {
 
@@ -533,6 +541,9 @@ class frontendDisplay {
     $meta_http_equivs = array();
     $meta_http_equivs['content-type'] = 'text/html; charset=utf-8';
     // $meta_http_equivs['imagetoolbar'] = 'no';
+    if (!empty($this->page_refresh)) {
+      $meta_http_equivs['refresh'] = $this->page_refresh;
+    }
 
     // Set the meta property values.
     $meta_names = array();

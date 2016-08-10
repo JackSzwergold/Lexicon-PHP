@@ -30,7 +30,7 @@ html, body
 	background-size: cover;
 }
 
-body { opacity : 0.4; }
+body { opacity: 0.4; }
 
 /**************************************************************************************************/
 a, a:visited, a:hover, a:active
@@ -66,7 +66,6 @@ hr
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'CaviarDreamsBold';
     src: url('../fonts/Caviar_Dreams_Bold-webfont.eot');
@@ -78,7 +77,6 @@ hr
     font-weight: bold;
     font-style: bold;
 }
-
 @font-face {
     font-family: 'LangdonRegular';
     src: url('../fonts/langdon-webfont.woff2') format('woff2'),
@@ -87,7 +85,6 @@ hr
     font-style: normal;
 
 }
-
 @font-face {
     font-family: 'LimelightRegular';
     src: url('../fonts/limelight-webfont.woff2') format('woff2'),
@@ -116,23 +113,17 @@ hr
 
 /**************************************************************************************************/
 .Core h1 { line-height: 0.9em; }
-.Core h2, .Core h3, .Core h4, .Core h5, .Core h6 { line-height: 1em; }
 
-.Core h1, .Core h2, .Core h3, .Core h4, .Core h5, .Core h6
+.Core h1
 {
 	font-family: "LangdonRegular", "Georgia", "New York", "Times New Roman", "Times", serif;
 	font-weight: normal;
-	clear: both;
 	text-transform: uppercase;
 	color: #000;
+	clear: both;
 }
 
-.Core h1 a, .Core h1 a:active, .Core h1 a:hover, .Core h1 a:visited,
-.Core h2 a, .Core h2 a:active, .Core h2 a:hover, .Core h2 a:visited,
-.Core h3 a, .Core h3 a:active, .Core h3 a:hover, .Core h3 a:visited,
-.Core h4 a, .Core h4 a:active, .Core h4 a:hover, .Core h4 a:visited,
-.Core h5 a, .Core h5 a:active, .Core h5 a:hover, .Core h5 a:visited,
-.Core h6 a, .Core h6 a:active, .Core h6 a:hover, .Core h6 a:visited
+.Core h1 a, .Core h1 a:active, .Core h1 a:hover, .Core h1 a:visited
 {
 	text-decoration: none;
 	font-weight: normal;
@@ -143,35 +134,4 @@ hr
 {
 	font-size: 850%;
 	margin: 0 0 0.1em 0;
-}
-
-.Core h2
-{
-	font-size: 280%;
-	margin: 0.2em 0 0.2em 0;
-}
-
-.Core h3
-{
-	font-size: 210%;
-	margin: 1.5em 0 0.15em 0;
-}
-
-.Core h4
-{
-	font-size: 190%;
-	margin: 1.1em 0 0.4em 0;
-}
-
-.Core h5
-{
-	font-size: 170%;
-	margin: 1.5em 0 0.7em 0;
-}
-
-.Core h6
-{
-	font-size: 160%;
-	line-height: 1.1em;
-	margin: 1.5em 0 0.8em 0;
 }
