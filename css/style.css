@@ -112,26 +112,41 @@ hr
 .Core { text-align: left; }
 
 /**************************************************************************************************/
-.Core h1 { line-height: 0.9em; }
-
 .Core h1
 {
 	font-family: "LangdonRegular", "Georgia", "New York", "Times New Roman", "Times", serif;
 	font-weight: normal;
 	text-transform: uppercase;
+	font-size: 850%;
+	margin: 0 0 0.1em 0;
+	line-height: 0.9em;
 	color: #000;
 	clear: both;
+	-webkit-animation: fadein 3s;
+	-moz-animation: fadein 3s;
+	animation: fadein 3s;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/**************************************************************************************************/
 .Core h1 a, .Core h1 a:active, .Core h1 a:hover, .Core h1 a:visited
 {
 	text-decoration: none;
 	font-weight: normal;
 	color: #000;
-}
-
-.Core h1
-{
-	font-size: 850%;
-	margin: 0 0 0.1em 0;
 }
