@@ -117,7 +117,6 @@ hr
 	font-family: "LangdonRegular", "Georgia", "New York", "Times New Roman", "Times", serif;
 	font-weight: normal;
 	text-transform: uppercase;
-	font-size: 850%;
 	margin: 0 0 0.1em 0;
 	line-height: 0.9em;
 	color: #000;
@@ -149,4 +148,32 @@ hr
 	text-decoration: none;
 	font-weight: normal;
 	color: #000;
+}
+
+/**************************************************************************************************/
+/* Media queries. */
+
+@media (min-width: 320px)
+{
+	.Core h1 { font-size: 350%; }
+}
+
+@media (min-width: 480px)
+{
+	.Core h1 { font-size: 450%; }
+}
+
+@media (min-width: 768px)
+{
+	.Core h1 { font-size: 750%; }
+}
+
+@media (min-width: 1024px)
+{
+	.Core h1 { font-size: 950%; }
+}
+
+@media (min-width: 1920px)
+{
+	.Core h1 { font-size: 1250%; }
 }
