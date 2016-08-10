@@ -23,7 +23,14 @@ html, body
 	height: 100%;
 	color: #000;
 	background-color: #fff;
+	background-image: url("../media/clouds_2.jpg");
+	background-repeat: no-repeat;
+	background-position: left top;
+	/* background-size: 100% 100%; */
+	background-size: cover;
 }
+
+body { opacity : 0.4; }
 
 /**************************************************************************************************/
 a, a:visited, a:hover, a:active
@@ -117,6 +124,7 @@ hr
 	font-weight: normal;
 	clear: both;
 	text-transform: uppercase;
+	color: #000;
 }
 
 .Core h1 a, .Core h1 a:active, .Core h1 a:hover, .Core h1 a:visited,
