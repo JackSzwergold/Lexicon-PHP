@@ -1,6 +1,11 @@
 # Set the default character set.
 AddDefaultCharset UTF-8
 
+# Set these access control headers for CORS stuff.
+Header set Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Headers "Content-Type, Cache-Control"
+Header add Access-Control-Allow-Methods "GET"
+
 # Set the options.
 Options +FollowSymlinks
 
