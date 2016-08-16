@@ -173,7 +173,7 @@ class frontendDisplayHelper {
     $mode_options['annoying'] = null;
     $mode_options['artisanal'] = null;
     $mode_options['basic'] = null;
-    $mode_options['non_words'] = null;
+    $mode_options['nonwords'] = null;
 
     //**************************************************************************************//
     // Set the view mode.
