@@ -31,7 +31,6 @@ html, body
 }
 
 /* body { opacity: 0.4; } */
-
 /**************************************************************************************************/
 a, a:visited, a:hover, a:active
 {
@@ -56,45 +55,18 @@ hr
 /* Font faces. */
 
 @font-face {
-    font-family: 'CaviarDreams';
-    src: url('../fonts/CaviarDreams-webfont.eot');
-    src: url('../fonts/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/CaviarDreams-webfont.woff2') format('woff2'),
-         url('../fonts/CaviarDreams-webfont.woff') format('woff'),
-         url('../fonts/CaviarDreams-webfont.ttf') format('truetype'),
-         url('../fonts/CaviarDreams-webfont.svg#ChunkFiveRoman') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'CaviarDreamsBold';
-    src: url('../fonts/Caviar_Dreams_Bold-webfont.eot');
-    src: url('../fonts/Caviar_Dreams_Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Caviar_Dreams_Bold-webfont.woff2') format('woff2'),
-         url('../fonts/Caviar_Dreams_Bold-webfont.woff') format('woff'),
-         url('../fonts/Caviar_Dreams_Bold-webfont.ttf') format('truetype'),
-         url('../fonts/Caviar_Dreams_Bold-webfont.svg#ChunkFiveRoman') format('svg');
-    font-weight: bold;
-    font-style: bold;
-}
-@font-face {
-    font-family: 'LangdonRegular';
-    src: url('../fonts/langdon-webfont.woff2') format('woff2'),
-         url('../fonts/langdon-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'LimelightRegular';
-    src: url('../fonts/limelight-webfont.woff2') format('woff2'),
-         url('../fonts/limelight-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'LangdonRegular';
+	src: url('../fonts/langdon-webfont.woff2') format('woff2'),
+			 url('../fonts/langdon-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 /**************************************************************************************************/
-.Wrapper
+.ember-view,
+.Wrapper,
+.Core,
+.Core h1
 {
 	display: flex;
 	flex-direction: column;
@@ -102,31 +74,59 @@ hr
 	align-items: center;
 	justify-content: center;
 	align-content: center;
-	width: calc(100% - 20px);
-	height: calc(100% - 20px);
-	margin: 0;
-	padding: 10px;
 }
 
 /**************************************************************************************************/
-.Core { text-align: left; }
+.ember-view
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.Wrapper
+{
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+}
+
+/**************************************************************************************************/
+.Core
+{
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	background-color: transparent;
+}
 
 /**************************************************************************************************/
 .Core h1
 {
+	position: absolute;
+	top: 0;
+	left: 0;
 	font-family: "LangdonRegular", "Georgia", "New York", "Times New Roman", "Times", serif;
 	font-weight: normal;
 	text-transform: uppercase;
-	margin: 0 0 0.1em 0;
 	line-height: 0.9em;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	margin: 0;
+	padding: 10px;
 	color: #000;
 	clear: both;
-	-webkit-animation: fadein 3s;
-	-moz-animation: fadein 3s;
-	animation: fadein 3s;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+	background-color: transparent;
+}
+
+/**************************************************************************************************/
+.Core h1.fadein
+{
+	-webkit-animation: fadein 3s linear 1 forwards;
+	-moz-animation: fadein 3s linear 1 forwards;
+	animation: fadein 3s linear 1 forwards;
 }
 
 @-webkit-keyframes fadein {
@@ -142,6 +142,26 @@ hr
     to   { opacity: 1; }
 }
 
+/**************************************************************************************************/
+.Core h1.fadeout
+{
+	-webkit-animation: fadeout 3s linear 1 forwards;
+	-moz-animation: fadeout 3s linear 1 forwards;
+	animation: fadeout 3s linear 1 forwards;
+}
+
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+@-moz-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
 
 /**************************************************************************************************/
 .Core h1 a, .Core h1 a:active, .Core h1 a:hover, .Core h1 a:visited

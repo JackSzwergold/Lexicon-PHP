@@ -235,7 +235,7 @@ class frontendDisplayHelper {
 
     //**************************************************************************************//
     // Set the body content.
-    $this->html_content = sprintf('<h1>%s</h1>', implode(' • ', $word_array['content']));
+    $this->html_content = sprintf('<h1 class="fadein">%s</h1>', implode(' • ', $word_array['content']));
 
     //**************************************************************************************//
     // Process the JSON content.
