@@ -23,14 +23,8 @@ html, body
 	height: 100%;
 	color: #000;
 	background-color: #fff;
-	/* background-image: url("../media/clouds_2.jpg"); */
-	/* background-repeat: no-repeat; */
-	/* background-position: left top; */
-	/* background-size: 100% 100%; */
-	/* background-size: cover; */
 }
 
-/* body { opacity: 0.4; } */
 /**************************************************************************************************/
 a, a:visited, a:hover, a:active
 {
@@ -90,8 +84,7 @@ hr
 	width: calc(100% - 20px);
 	height: calc(100% - 20px);
 	margin: 0;
-	padding: 0;
-	background-color: transparent;
+	padding: 10px;
 }
 
 /**************************************************************************************************/
@@ -99,7 +92,10 @@ hr
 {
 	width: calc(100% - 20px);
 	height: calc(100% - 20px);
-	background-color: transparent;
+	background-image: url("../media/clouds_2.jpg");
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: cover;
 }
 
 /**************************************************************************************************/
@@ -116,7 +112,7 @@ hr
 	height: calc(100% - 20px);
 	margin: 0;
 	padding: 10px;
-	color: #000;
+	color: #fff;
 	clear: both;
 	background-color: transparent;
 }
