@@ -25,7 +25,7 @@ set :pty, false
 
 # Default value for linked_dirs is []
 # set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
-set :linked_dirs, fetch(:linked_dirs, []).push('cache')
+# set :linked_dirs, fetch(:linked_dirs, []).push('cache')
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
