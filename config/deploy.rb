@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.6.1'
+lock '3.13.0'
 
 set :application, 'lexicon'
 set :short_name, 'lexicon'
