@@ -45,6 +45,7 @@ class frontendDisplay {
 
   private $javascripts = array();
   private $link_items = array();
+  private $favicons = array();
 
   private $base = NULL;
   private $page_depth = 0;
@@ -855,8 +856,8 @@ class frontendDisplay {
     // Set the wrapper divs.
     $div_opening = $div_closing = '';
     if (!empty($this->page_div_wrappper_array)) {
-      $div_opening = '<div class="' . implode($this->page_div_wrappper_array, '">' . "\n" . '<div class="') . '">';
-      $div_closing = '</div><!-- .' . implode(array_reverse($this->page_div_wrappper_array), '-->' . "\n" . '</div><!-- .') . ' -->';
+      $div_opening = '<div class="' . implode( '">' . "\n" . '<div class="', $this->page_div_wrappper_array) . '">';
+      $div_closing = '</div><!-- .' . implode('-->' . "\n" . '</div><!-- .', array_reverse($this->page_div_wrappper_array)) . ' -->';
     }
 
     $ret = (!empty($nameplate) ? $nameplate : '')
